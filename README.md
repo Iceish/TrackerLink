@@ -11,7 +11,11 @@ This is a free Rocket League plugin for BakkesMod that allows you to instantly o
 1. Make sure you have BakkesMod installed. If not, download and install it from the official BakkesMod website.
 2. Download the Rocket League Tracker Plugin from the releases section of this repository.
 3. Copy the plugin file (TrackerLink.dll) to the "plugins" folder in your BakkesMod installation directory.
-4. Launch Rocket League and BakkesMod. The plugin should automatically load.
+4. Launch Rocket League and BakkesMod.
+5. Open BakkesMod menu (F2)
+5. Open plugin category.
+6. Open Plugin Manager.
+7. Check TrackerLink.
 
 ## Usage
 
