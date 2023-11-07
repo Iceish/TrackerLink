@@ -59,10 +59,12 @@ void TrackerLink::onTick(std::string eventName)
 		for (size_t i = 0; i < players.Count(); i++) {
 			PriWrapper priw = players.Get(i);
 			OnlinePlatform plateform = priw.GetPlatform();
-			LOG("" + priw.GetPlayerName().ToString() + " " + PlatformMap.at(plateform));
+			
+			string query = (PlatformMap.at(plateform) == "steam") ? priw.GetUniqueIdWrapper().str() : priw.GetPlayerName().ToString();
+			
+			LOG("" + priw.GetPlayerName().ToString() + "/" + query + " " + PlatformMap.at(plateform));
 
-
-			string s = std::format("https://rocketleague.tracker.network/rocket-league/profile/{0}/{1}", PlatformMap.at(plateform), priw.GetPlayerName().ToString());
+			string s = std::format("https://rocketleague.tracker.network/rocket-league/profile/{0}/{1}", PlatformMap.at(plateform), query);
 
 			std::wstring stemp = std::wstring(s.begin(), s.end());
 			LPCWSTR url = stemp.c_str();
